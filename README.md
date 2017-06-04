@@ -1,10 +1,9 @@
 
-README
-======
 
- This is for personal use ony! Don't clone and don't use, unless...
+This is for personal use ony! Don't clone and don't use, unless...
 
-INSTALLATION
+
+Installation
 ============
 
 Clone the repo:
@@ -14,13 +13,14 @@ Clone the repo:
 `vim +PlugClean +PlugInstall +qall`
 
 Symlink .vimrc and .gvimrc to .vim/vimrc and .vim/gvimrc:
-`mv ~/.vimrc ~/.vimrc.old`
-`ln -s ~/.vim/vimrc ~/.vimrc`
-`mv ~/.gvimrc ~/.gvimrc.old`
-`ln -s ~/.vim/gvimrc ~/.gvimrc`
+
+    mv ~/.vimrc ~/.vimrc.old
+    ln -s ~/.vim/vimrc ~/.vimrc
+    mv ~/.gvimrc ~/.gvimrc.old
+    ln -s ~/.vim/gvimrc ~/.gvimrc
 
 
- LINKS
+ Links
  =====
 
   -  http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
@@ -28,7 +28,7 @@ Symlink .vimrc and .gvimrc to .vim/vimrc and .vim/gvimrc:
   -  https://www.vi-improved.org
   -  https://github.com/junegunn/vim-plug
 
- PERSONAL NOTES
+ Personal Notes
  ==============
 
  I was using Vundle to manage my vim plugins. But recently changed to "Plug".
