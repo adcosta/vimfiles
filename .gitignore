@@ -1,0 +1,9 @@
+tmp/*
+backup/*
+undodir/*
+ctrlp_cache/*
+view/*
+gview/*
+.netrwhist
+!tags
+./tags
