@@ -1,16 +1,18 @@
 
 
-This is for personal use ony! Don't clone and don't use, unless...
+**Attention:** This is for _personal use_ ony! Don't clone and don't use, unless...
 
 
 Installation
 ============
 
 Clone the repo:
-`git clone https://github.com/adcosta/vimfiles.git ~/.vim`
+
+    git clone https://github.com/adcosta/vimfiles.git ~/.vim
 
 (Re)Install Plugins (not stored in repo, except Plug.vim):
-`vim +PlugClean +PlugInstall +qall`
+
+    vim +PlugClean +PlugInstall +qall
 
 Symlink .vimrc and .gvimrc to .vim/vimrc and .vim/gvimrc:
 
