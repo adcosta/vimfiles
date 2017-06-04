@@ -1,9 +1,10 @@
 tmp/*
 backup/*
 undodir/*
-ctrlp_cache/*
 view/*
 gview/*
+plugged/*
+ctrlp_cache/*
 .netrwhist
 !tags
 ./tags

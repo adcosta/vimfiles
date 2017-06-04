@@ -1,8 +1,24 @@
 
- README
- ======
+README
+======
 
  This is for personal use ony! Don't clone and don't use, unless...
+
+INSTALLATION
+============
+
+Clone the repo:
+`git clone https://github.com/adcosta/vimfiles.git ~/.vim`
+
+(Re)Install Plugins (not stored in repo, except Plug.vim):
+`vim +PlugClean +PlugInstall +qall`
+
+Symlink .vimrc and .gvimrc to .vim/vimrc and .vim/gvimrc:
+`mv ~/.vimrc ~/.vimrc.old`
+`ln -s ~/.vim/vimrc ~/.vimrc`
+`mv ~/.gvimrc ~/.gvimrc.old`
+`ln -s ~/.vim/gvimrc ~/.gvimrc`
+
 
  LINKS
  =====
