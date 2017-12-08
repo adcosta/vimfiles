@@ -12,10 +12,15 @@
    Plug 'honza/vim-snippets'      " Snippets are separated from engine.
    Plug 'jlanzarotta/bufexplorer' " quickly and easily switch between buffers 
    Plug 'ctrlpvim/ctrlp.vim'      "  Full path fuzzy file finder for Vim
+"   Plug 'wincent/command-t'       "  find and open files...  // I am using old Ruby version
    Plug 'junegunn/vim-easy-align' " simple, easy-to-use Vim alignment plugin.
    Plug 'vim-airline/vim-airline' " a new status line.... 
    Plug 'google/vim-searchindex'  " count ocorrences in a find  (google plugins)
    Plug 'vim-scripts/restore_view.vim'  " a more sofisticated way to keep last pos in file
+   Plug 'vim-scripts/MPage'   " show a file in multiple windows
+   Plug 'will133/vim-dirdiff'     " vimdiff directories... does it work?
+   Plug 'lifepillar/vim-cheat40'  " vim cheat sheet ... 
+   Plug 'Rykka/riv.vim'           " Riv is a vim plugin for taking notes with reStructuredText 
    "
    " Keep Plug commands between plug#begin/end.
    call plug#end()            " required
