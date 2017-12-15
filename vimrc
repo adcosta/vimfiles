@@ -3,6 +3,7 @@
    " Change frrom Vundle to Plug on jun.2017 (not sure if it was a good decision)
 
    set nocompatible              " be iMproved, required
+   set t_Co=256                  " Full 256 color support for VIM and/or Xterm
    call plug#begin('~/.vim/plugged')
 
    " just search for the Plug with :PluginSearch and put its name here
