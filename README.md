@@ -21,6 +21,16 @@ Symlink .vimrc and .gvimrc to .vim/vimrc and .vim/gvimrc:
     mv ~/.gvimrc ~/.gvimrc.old
     ln -s ~/.vim/gvimrc ~/.gvimrc
 
+Check the charset settings of terminal for UTF-8:
+
+    locale 
+
+    export LANG=en_US.UTF-8
+    export LC_ALL=en_US.UTF-8
+    export EDITOR=vim
+
+    locale
+
 
  Links
  =====
