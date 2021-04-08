@@ -1,8 +1,10 @@
 " colorscheme soda        " good for printing.... and working
-" colorscheme playroom    " very good for printing...
+" colorscheme playroom    " very good for printing... ALWAYS USE THIS TO PRINT
+" ==> generate an HTML version using :TOhtml and then copy paste on browser
 " colorscheme lightcolors " very good for working...
 " colorscheme solarized    " very popular...
-colorscheme rdark    
+" colorscheme rdark    
+colorscheme vimhut
 " use :SCROLL to see all the colors in real usage
 " colors for GVIM are in .gvimrc 
 " colors for gvim are: 
@@ -19,5 +21,5 @@ colorscheme rdark
 " au BufWinLeave * mkview
 " au VimEnter * if argc() >0 | loadview | endif
 set viewdir=~/.vim/gview " where to put backup files
-" Be sure to also look at :mksession because it is even more powerful...
-set nolist  " no special chars on gvim :-)
+" Be sure to also look at :mksession because it is even more powerful..
+"set nolist  " no special chars on gvim :-)

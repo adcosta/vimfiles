@@ -1,6 +1,6 @@
 " Plug vim pluin Manager {
    " must be the first block!!
-   " Change frrom Vundle to Plug on jun.2017 (not sure if it was a good decision)
+   " Change frrom Vundle to Plug on jun.2017 (not sure if it was a good decision). yes it is!
 
    set nocompatible              " be iMproved, required
    set t_Co=256                  " Full 256 color support for VIM and/or Xterm
@@ -9,11 +9,13 @@
    " just search for the Plug with :PluginSearch and put its name here
    " them run :PlugInstall and that's it! Ii works also with github names... 
    Plug 'vim-scripts/L9'          " it's a standard vim library other plugins may use.
-   Plug 'SirVer/ultisnips'        " Handle snipets. Track the engine.
+   Plug 'rizzatti/dash.vim'       " will search for terms using the excellent Dash.app 
+   " Plug 'SirVer/ultisnips'        " Handle snipets. Track the engine.
    Plug 'honza/vim-snippets'      " Snippets are separated from engine.
    Plug 'jlanzarotta/bufexplorer' " quickly and easily switch between buffers 
    Plug 'ctrlpvim/ctrlp.vim'      "  Full path fuzzy file finder for Vim
 "   Plug 'wincent/command-t'       "  find and open files...  // I am using old Ruby version
+"   I am not using NERDTree... use netrw (:Lex) or ctrlp
    Plug 'junegunn/vim-easy-align' " simple, easy-to-use Vim alignment plugin.
    Plug 'vim-airline/vim-airline' " a new status line.... 
    Plug 'google/vim-searchindex'  " count ocorrences in a find  (google plugins)
@@ -22,6 +24,11 @@
    Plug 'will133/vim-dirdiff'     " vimdiff directories... does it work?
    Plug 'lifepillar/vim-cheat40'  " vim cheat sheet ... 
    Plug 'Rykka/riv.vim'           " Riv is a vim plugin for taking notes with reStructuredText 
+   Plug 'johngrib/vim-game-snake' " snake game for key movement
+   Plug 'nathanalderson/yang.vim' " vim syntax for YANG modules
+   Plug 'morhetz/gruvbox'         " vim color scheme used in SpaceVim...
+   Plug 'cespare/vim-toml'        " Vim syntax for TOML.
+   Plug 'zxqfl/tabnine-vim'       " Tabnine is a GPT-2 based autocomplete for all languages
    "
    " Keep Plug commands between plug#begin/end.
    call plug#end()            " required
@@ -47,8 +54,8 @@
 
 " Basics {
     set nocompatible " explicitly get out of vi-compatible mode
-    set background=light
-    " set background=dark
+    " set background=light
+    set background=dark
     " added by A.Costa to really memorize last position on file (new way!)
     " not really required, because now I have a plugin for that: restore_view
     " au BufWinLeave ?* mkview
@@ -87,8 +94,11 @@
     set showcmd		" display incomplete commands
     set incsearch	" do incremental searching
     set hlsearch
+    set scrolloff=2 " keep cursor away from top or bottom of screen
     " colorscheme ir_black 
-    colorscheme mushroom
+    " This one is great, the one I am using by default.. should i use gruvbox?
+    colorscheme mushroom 
+    " colorscheme gruvbox
     " colors for vim in terminal mode are: 
     " ---> ir_black, " torte, spring, mushroom, solarized
     " colors for GVIM are in .gvimrc 
