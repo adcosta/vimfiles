@@ -152,7 +152,8 @@
 	set showbreak=↪\ 
 	set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 	" vou retirar para ja esta coisa dos carateres especiais!... 
-	set nolist
+	"set nolist
+	set list
 	"not ready for this plugin yet :-((((
 	" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
 	"vmap <Enter> <Plug>(EasyAlign)
