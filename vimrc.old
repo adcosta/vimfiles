@@ -20,7 +20,6 @@
    Plug 'vim-airline/vim-airline' " a new status line.... 
    Plug 'google/vim-searchindex'  " count ocorrences in a find  (google plugins)
    Plug 'vim-scripts/restore_view.vim'  " a more sofisticated way to keep last pos in file
-"   Restore view note: it also stores filetype in view folder (problem for new synatx plugins, must remove files view files first)
    Plug 'vim-scripts/MPage'   " show a file in multiple windows
    Plug 'will133/vim-dirdiff'     " vimdiff directories... does it work?
    Plug 'lifepillar/vim-cheat40'  " vim cheat sheet ... 
