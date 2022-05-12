@@ -29,6 +29,7 @@
    Plug 'morhetz/gruvbox'         " vim color scheme used in SpaceVim...
    Plug 'cespare/vim-toml'        " Vim syntax for TOML.
    Plug 'zxqfl/tabnine-vim'       " Tabnine is a GPT-2 based autocomplete for all languages
+   Plug 'pearofducks/ansible-vim' " syntax plugin for YAML playbooks Ansible 2.0
    "
    " Keep Plug commands between plug#begin/end.
    call plug#end()            " required
