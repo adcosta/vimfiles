@@ -20,13 +20,14 @@
    Plug 'vim-airline/vim-airline' " a new status line.... 
    Plug 'google/vim-searchindex'  " count ocorrences in a find  (google plugins)
    Plug 'vim-scripts/restore_view.vim'  " a more sofisticated way to keep last pos in file
-"   Restore view note: it also stores filetype in view folder (problem for new synatx plugins, must remove files view files first)
+"   Restore view also stores filetype in .vim/view folder (for new syntax plugins, remove view files first)
    Plug 'vim-scripts/MPage'   " show a file in multiple windows
    Plug 'will133/vim-dirdiff'     " vimdiff directories... does it work?
    Plug 'lifepillar/vim-cheat40'  " vim cheat sheet ... 
-   Plug 'Rykka/riv.vim'           " Riv is a vim plugin for taking notes with reStructuredText 
+"   Plug 'Rykka/riv.vim'           " Riv is a vim plugin for taking notes with reStructuredText 
    Plug 'johngrib/vim-game-snake' " snake game for key movement
    Plug 'pearofducks/ansible-vim' " syntax plugin for YAML playbooks Ansible 2.0
+   Plug 'Yggdroot/indentLine'     " display the indention levels with thin vertical lines 
    Plug 'nathanalderson/yang.vim' " vim syntax for YANG modules
    Plug 'morhetz/gruvbox'         " vim color scheme used in SpaceVim...
    Plug 'cespare/vim-toml'        " Vim syntax for TOML.
