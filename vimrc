@@ -25,6 +25,8 @@
    Plug 'will133/vim-dirdiff'     " vimdiff directories... does it work?
    Plug 'lifepillar/vim-cheat40'  " vim cheat sheet ... 
 "   Plug 'Rykka/riv.vim'           " Riv is a vim plugin for taking notes with reStructuredText 
+   Plug 'preservim/vim-markdown'   " Makdown vim mode
+   Plug 'tpope/vim-fugitive'       " incorporate Git into the Vim workflow
    Plug 'johngrib/vim-game-snake' " snake game for key movement
    Plug 'pearofducks/ansible-vim' " syntax plugin for YAML playbooks Ansible 2.0
    Plug 'Yggdroot/indentLine'     " display the indention levels with thin vertical lines 

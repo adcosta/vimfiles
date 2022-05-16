@@ -8,7 +8,9 @@ Installation
 
 Clone the repo:
 
+```bash
     git clone https://github.com/adcosta/vimfiles.git ~/.vim
+```
 
 (Re)Install Plugins (not stored in repo, except Plug.vim):
 
