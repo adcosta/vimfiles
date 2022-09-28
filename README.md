@@ -16,6 +16,9 @@ Clone the repo:
 
     vim +PlugClean +PlugInstall +qall
 
+    NOTE: Some plugins, like YCM, may require extra installation
+          See https://github.com/ycm-core/YouCompleteMe#installation
+
 Symlink .vimrc and .gvimrc to .vim/vimrc and .vim/gvimrc:
 
     mv ~/.vimrc ~/.vimrc.old
