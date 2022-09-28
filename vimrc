@@ -25,15 +25,21 @@
    Plug 'will133/vim-dirdiff'     " vimdiff directories... does it work?
    Plug 'lifepillar/vim-cheat40'  " vim cheat sheet ... 
 "   Plug 'Rykka/riv.vim'           " Riv is a vim plugin for taking notes with reStructuredText 
-   Plug 'preservim/vim-markdown'   " Makdown vim mode
+"   Plug 'preservim/vim-markdown'   " Makdown vim mode  (Não me dou bem com isto)
    Plug 'tpope/vim-fugitive'       " incorporate Git into the Vim workflow
+   Plug 'tpope/vim-surround'       " add/change suuroundings in pairs
+   Plug 'tpope/vim-markdown'       " syntax highlighting and filetype plugins for Markdown
+   Plug 'lervag/vimtex'            " VimTeX is a modern Vim and Neovim filetype and syntax plugin for LaTeX files.
    Plug 'johngrib/vim-game-snake' " snake game for key movement
    Plug 'pearofducks/ansible-vim' " syntax plugin for YAML playbooks Ansible 2.0
    Plug 'Yggdroot/indentLine'     " display the indention levels with thin vertical lines 
    Plug 'nathanalderson/yang.vim' " vim syntax for YANG modules
    Plug 'morhetz/gruvbox'         " vim color scheme used in SpaceVim...
    Plug 'cespare/vim-toml'        " Vim syntax for TOML.
-   Plug 'zxqfl/tabnine-vim'       " Tabnine is a GPT-2 based autocomplete for all languages
+   Plug 'ycm-core/YouCompleteMe'  " YouCompleteMe: a code-completion engine for Vim
+"   Plug 'zxqfl/tabnine-vim'       " Tabnine is a GPT-2 based autocomplete for all languages (OLD?)
+"   Plug 'tabnine/YouCompleteMe'   " This is a fork of YouCompleteMe to
+"  integrate Tabnine (is it a paid service? do I need it?) https://github.com/tabnine/YouCompleteMe 
    "
    " Keep Plug commands between plug#begin/end.
    call plug#end()            " required
@@ -96,13 +102,13 @@
 
 " Vim UI {
     set history=80      " keep 50 lines of command line history
-    set showcmd		" display incomplete commands
-    set incsearch	" do incremental searching
+    set showcmd         " display incomplete commands
+    set incsearch       " do incremental searching
     set hlsearch
-    set scrolloff=2 " keep cursor away from top or bottom of screen
-    " colorscheme ir_black 
+    set scrolloff=2     " keep cursor away from top or bottom of screen
+    " colorscheme ir_black
     " This one is great, the one I am using by default.. should i use gruvbox?
-    colorscheme mushroom 
+    colorscheme mushroom
     " colorscheme gruvbox
     " colors for vim in terminal mode are: 
     " ---> ir_black, " torte, spring, mushroom, solarized
@@ -138,6 +144,8 @@
     let g:airline_left_sep = '▶'
     let g:airline_right_sep = '◀'
 	"call togglebg#map("")
+    " let g:vim_markdown_folding_disabled = 1
+    " let g:vim_markdown_conceal = 0
 " }
 
 " Text Formatting/Layout {
