@@ -30,13 +30,14 @@
    Plug 'tpope/vim-surround'       " add/change suuroundings in pairs
    Plug 'tpope/vim-markdown'       " syntax highlighting and filetype plugins for Markdown
    Plug 'lervag/vimtex'            " VimTeX is a modern Vim and Neovim filetype and syntax plugin for LaTeX files.
+   Plug 'habamax/vim-asciidoctor'  " Plugin for AsciiDoc 
    Plug 'johngrib/vim-game-snake' " snake game for key movement
    Plug 'pearofducks/ansible-vim' " syntax plugin for YAML playbooks Ansible 2.0
    Plug 'Yggdroot/indentLine'     " display the indention levels with thin vertical lines 
    Plug 'nathanalderson/yang.vim' " vim syntax for YANG modules
    Plug 'morhetz/gruvbox'         " vim color scheme used in SpaceVim...
    Plug 'cespare/vim-toml'        " Vim syntax for TOML.
-   Plug 'ycm-core/YouCompleteMe'  " YouCompleteMe: a code-completion engine for Vim
+"   Plug 'ycm-core/YouCompleteMe'  " YouCompleteMe: a code-completion engine for Vim
 "   Plug 'zxqfl/tabnine-vim'       " Tabnine is a GPT-2 based autocomplete for all languages (OLD?)
 "   Plug 'tabnine/YouCompleteMe'   " This is a fork of YouCompleteMe to
 "  integrate Tabnine (is it a paid service? do I need it?) https://github.com/tabnine/YouCompleteMe 
@@ -71,7 +72,7 @@
     " not really required, because now I have a plugin for that: restore_view
     " au BufWinLeave ?* mkview
     " au BufWinEnter ?* silent loadview
-	" " au VimEnter * if argc() >0 | loadview | endif
+    " " au VimEnter * if argc() >0 | loadview | endif
     set viewdir=~/.vim/view " where to put backup files
     " Be sure to also look at :mksession because it is even more powerful...
     set undodir=~/.vim/undodir  " where to store undo persistent changes
@@ -143,42 +144,42 @@
     let g:airline_section_z = airline#section#create(['windowswap', '%3p%%(%L)', 'linenr', ':%3v'])
     let g:airline_left_sep = '▶'
     let g:airline_right_sep = '◀'
-	"call togglebg#map("")
+    "call togglebg#map("")
     " let g:vim_markdown_folding_disabled = 1
     " let g:vim_markdown_conceal = 0
 " }
 
 " Text Formatting/Layout {
-	set expandtab " no real tabs please!
-	set formatoptions=rq " Automatically insert comment leader on return,
+    set expandtab " no real tabs please!
+    set formatoptions=rq " Automatically insert comment leader on return,
                          " and let gq format comments
-	set softtabstop=4 " when hitting tab or backspace, how many spaces
+    set softtabstop=4 " when hitting tab or backspace, how many spaces
                       "should a tab be (see expandtab)
-	set tabstop=4 " real tabs should be 8, and they will show with
+    set tabstop=4 " real tabs should be 8, and they will show with
                   " set list on
-	set shiftwidth=4
-	set number
-	" show invisible chars (like in Sublime)
-	" set nolist
-	set list
-	set listchars=tab:▸\ ,eol:¬
-	set showbreak=↪\ 
-	set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
-	" vou retirar para ja esta coisa dos carateres especiais!... 
-	"set nolist
-	set list
-	"not ready for this plugin yet :-((((
-	" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
-	"vmap <Enter> <Plug>(EasyAlign)
-	" Start interactive EasyAlign for a motion/text object (e.g. gaip)
-	"nmap ga <Plug>(EasyAlign)
-	" -- handle indentation (01.01.2016)
-	set autoindent
-	set textwidth=80
-	"Sets in-line spellchecking
-	" Set local language 
-	" use :WP or :WPE (see Helping functions below)
-	" setlocal spell spelllang=pt,en
+    set shiftwidth=4
+    set number
+    " show invisible chars (like in Sublime)
+    " set nolist
+    set list
+    set listchars=tab:▸\ ,eol:¬
+    set showbreak=↪\ 
+    set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
+    " vou retirar para ja esta coisa dos carateres especiais!... 
+    "set nolist
+    set list
+    "not ready for this plugin yet :-((((
+    " Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
+    "vmap <Enter> <Plug>(EasyAlign)
+    " Start interactive EasyAlign for a motion/text object (e.g. gaip)
+    "nmap ga <Plug>(EasyAlign)
+    " -- handle indentation (01.01.2016)
+    set autoindent
+    set textwidth=80
+    "Sets in-line spellchecking
+    " Set local language 
+    " use :WP or :WPE (see Helping functions below)
+    " setlocal spell spelllang=pt,en
 " }
 
 " Helping functions... {
@@ -191,7 +192,7 @@
 
    func! WordProcessorMode2() 
      setlocal formatoptions=1 
-     setlocal noexpandtab 
+     "setlocal noexpandtab 
      map j gj 
      map k gk
      setlocal spell spelllang=en
