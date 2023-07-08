@@ -21,13 +21,16 @@ Clone the repo:
 
 Symlink .vimrc and .gvimrc to .vim/vimrc and .vim/gvimrc:
 
+```bash
     mv ~/.vimrc ~/.vimrc.old
     ln -s ~/.vim/vimrc ~/.vimrc
     mv ~/.gvimrc ~/.gvimrc.old
     ln -s ~/.vim/gvimrc ~/.gvimrc
+```
 
 Check the charset settings of terminal for UTF-8:
 
+```bash
     locale 
 
     export LANG=en_US.UTF-8
@@ -35,7 +38,13 @@ Check the charset settings of terminal for UTF-8:
     export EDITOR=vim
 
     locale
+```
 
+You may try to run a bash scipt to it all:
+
+```bash
+~/.vim/vim-setup.bash
+```
 
  Links
  =====

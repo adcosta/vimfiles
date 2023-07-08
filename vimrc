@@ -35,8 +35,8 @@
    Plug 'pearofducks/ansible-vim' " syntax plugin for YAML playbooks Ansible 2.0
    Plug 'Yggdroot/indentLine'     " display the indention levels with thin vertical lines 
    Plug 'nathanalderson/yang.vim' " vim syntax for YANG modules
-   Plug 'morhetz/gruvbox'         " vim color scheme used in SpaceVim...
    Plug 'cespare/vim-toml'        " Vim syntax for TOML.
+   Plug 'morhetz/gruvbox'         " vim color scheme used in SpaceVim...
 "   Plug 'ycm-core/YouCompleteMe'  " YouCompleteMe: a code-completion engine for Vim
 "   Plug 'zxqfl/tabnine-vim'       " Tabnine is a GPT-2 based autocomplete for all languages (OLD?)
 "   Plug 'tabnine/YouCompleteMe'   " This is a fork of YouCompleteMe to
