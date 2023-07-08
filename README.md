@@ -43,7 +43,10 @@ Check the charset settings of terminal for UTF-8:
 You may try to run a bash scipt to it all:
 
 ```bash
-~/.vim/vim-setup.bash
+wget https://raw.githubusercontent.com/adcosta/vimfiles/master/vim-setup.bash
+chmod +x vim-setup.bash
+./vim-setup.bash
+rm vim-setup.bash
 ```
 
  Links
