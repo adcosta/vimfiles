@@ -16,8 +16,11 @@
    Plug 'ctrlpvim/ctrlp.vim'      "  Full path fuzzy file finder for Vim
 "   Plug 'wincent/command-t'       "  find and open files...  // I am using old Ruby version
 "   I am not using NERDTree... use netrw (:Lex) or ctrlp
+   " Plug 'preservim/nerdtree'       " A tree explorer plugin for vim
+   Plug 'preservim/nerdcommenter'  " Comment functions so powerful—no comment necessary.
    Plug 'junegunn/vim-easy-align' " simple, easy-to-use Vim alignment plugin.
    Plug 'vim-airline/vim-airline' " a new status line.... 
+   Plug 'vim-airline/vim-airline-themes'  " a collection of themes for vim-airline
    Plug 'google/vim-searchindex'  " count ocorrences in a find  (google plugins)
    Plug 'vim-scripts/restore_view.vim'  " a more sofisticated way to keep last pos in file
 "   Restore view also stores filetype in .vim/view folder (for new syntax plugins, remove view files first)
@@ -36,7 +39,18 @@
    Plug 'Yggdroot/indentLine'     " display the indention levels with thin vertical lines 
    Plug 'nathanalderson/yang.vim' " vim syntax for YANG modules
    Plug 'cespare/vim-toml'        " Vim syntax for TOML.
-   Plug 'morhetz/gruvbox'         " vim color scheme used in SpaceVim...
+   Plug 'morhetz/gruvbox'         " vim color scheme used in SpaceVim..
+   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }     " install ensures latest binary
+   Plug 'junegunn/fzf.vim'         " vim.fzf use fzf finder inside vim
+   " Set of pulgins to make vim like VScode (from https://github.com/ibnYusrat/vimcode)
+   Plug 'mattn/emmet-vim'         "emmet for vim which greatly improves HTML & CSS workflow
+   " Plug 'mhartington/oceanic-next' " theme 
+   " Plug 'jcherven/jummidark.vim'   "  color scheme
+   Plug 'neoclide/coc.nvim', {'branch': 'release'}   " autocomplete: Make your Vim/Neovim as smart as VS Code
+   Plug 'jremmen/vim-ripgrep'     " Use RipGrep in Vim and display results in a quickfix list 
+"   Plug 'ryanoasis/vim-devicons'  " Nodejs extension host for vim 
+"   Plug 'metakirby5/codi.vim'     " The interactive scratchpad for hackers.
+"   Plug 'APZelos/blamer.nvim'     " A git blame plugin
 "   Plug 'ycm-core/YouCompleteMe'  " YouCompleteMe: a code-completion engine for Vim
 "   Plug 'zxqfl/tabnine-vim'       " Tabnine is a GPT-2 based autocomplete for all languages (OLD?)
 "   Plug 'tabnine/YouCompleteMe'   " This is a fork of YouCompleteMe to
@@ -110,6 +124,7 @@
     " colorscheme ir_black
     " This one is great, the one I am using by default.. should i use gruvbox?
     colorscheme mushroom
+    set guifont=Cousine\ Nerd\ Font,\ Regular
     " colorscheme gruvbox
     " colors for vim in terminal mode are: 
     " ---> ir_black, " torte, spring, mushroom, solarized
@@ -147,10 +162,12 @@
     "call togglebg#map("")
     " let g:vim_markdown_folding_disabled = 1
     " let g:vim_markdown_conceal = 0
+    set conceallevel=0 
+    let g:vimtex_conceal = 0
+
 " }
 
 " Text Formatting/Layout {
-    set expandtab " no real tabs please!
     set formatoptions=rq " Automatically insert comment leader on return,
                          " and let gq format comments
     set softtabstop=4 " when hitting tab or backspace, how many spaces
@@ -180,7 +197,32 @@
     " Set local language 
     " use :WP or :WPE (see Helping functions below)
     " setlocal spell spelllang=pt,en
+    set expandtab " no real tabs please!
 " }
+
+" Coc.nvim plugin configuration... {
+    " Use tab for trigger completion with characters ahead and navigate
+    " NOTE: There's always complete item selected by default, you may want to enable
+    " no select by `"suggest.noselect": true` in your configuration file
+    " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+    " other plugin before putting this into your config
+    inoremap <silent><expr> <TAB>
+          \ coc#pum#visible() ? coc#pum#next(1) :
+          \ CheckBackspace() ? "\<Tab>" :
+          \ coc#refresh()
+    inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+    
+    " Make <CR> to accept selected completion item or notify coc.nvim to format
+    " <C-g>u breaks current undo, please make your own choice
+    inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                                  \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+    function! CheckBackspace() abort
+      let col = col('.') - 1
+      return !col || getline('.')[col - 1]  =~# '\s'
+    endfunction
+" }
+
 
 " Helping functions... {
    func! WordProcessorMode() 
