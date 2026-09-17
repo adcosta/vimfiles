@@ -55,6 +55,7 @@
 "   Plug 'zxqfl/tabnine-vim'       " Tabnine is a GPT-2 based autocomplete for all languages (OLD?)
 "   Plug 'tabnine/YouCompleteMe'   " This is a fork of YouCompleteMe to
 "  integrate Tabnine (is it a paid service? do I need it?) https://github.com/tabnine/YouCompleteMe 
+   Plug 'NLKNguyen/papercolor-theme' " color scheme (to use on projector)
    "
    " Keep Plug commands between plug#begin/end.
    call plug#end()            " required
@@ -91,6 +92,12 @@
     " Be sure to also look at :mksession because it is even more powerful...
     set undodir=~/.vim/undodir  " where to store undo persistent changes
     set undofile
+    " use system clipboard when available (unnamedplus only on X11)
+    if has('unnamedplus')
+          set clipboard=unnamedplus,unnamed,exclude:cons\|linux
+    elseif has('clipboard')
+          set clipboard=unnamed,exclude:cons\|linux
+    endif
 " }
 
 " General {
